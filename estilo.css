@@ -1,0 +1,72 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+    background-image: url('img/pontos.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#tela{
+    height: 100%;
+}
+
+#site{
+  height: 100%;
+  position: relative;
+}
+
+#cabecalho{
+  height: 10rem;
+  width: 100vw;
+  background-image: url('img/logo-pmvv.png');
+  background-size: 300px 100px, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+a{
+  background-color: #dfdfdf;
+  text-decoration: none;
+  color: #075AA9;
+  border: 1px solid black;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.527);
+}
+
+a:hover{
+    background-color: #0aa2e9e5;
+    box-shadow: 5px 5px 5px rgba(255, 253, 253, 0.164);
+    color: #FFFFFF;
+}
+
+footer{
+  position: relative;
+  bottom: -5vh;
+  width: 100vw;
+  margin-top: 1rem;
+}
+
+footer p{
+  font-size: .8rem;
+  font-weight: lighter;
+  color: white;
+  width: 100%;
+  padding: 10px;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: scale(100%)
+}
