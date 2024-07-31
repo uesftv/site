@@ -6,7 +6,7 @@
 
 
 body{
-    background-image: url('img/pontos.png');
+    background-image: url('img/pontos.svg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -28,6 +28,20 @@ body{
   background-size: 300px 100px, cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+#sair{
+    background-color: #dfdfdf;
+    text-decoration: none;
+    color: #075AA9;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.527);
+}
+
+#sair:hover{
+    background-color: #e90a0ad7;
+    box-shadow: 5px 5px 5px rgba(255, 253, 253, 0.164);
+    color: #FFFFFF;
 }
 
 
