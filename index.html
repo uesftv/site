@@ -10,89 +10,87 @@
         <link rel="stylesheet" href="estilo-index.css">
         <link rel="shortcut icon" href="img/logo-favicon.ico" type="image/x-icon">
       </head>
-<body>
-    </div>
-    <div id="tela">
+    <body>
         <div class="row justify-content-center container-fluid" id="site">
-          <header class="mb-2 row justify-content-center" id="cabecalho">
-          </header>
-          <main class="row col-10 col-md-8 col-lg-6 col-xl-8 col-xxl-8 justify-content-center">
-            <h1 class="fade-in display mb-3 text-light text-center">Portal do Servidor</h1>
-            <h1 class="fade-in display mb-3 text-light text-center">UESF TERRA VERMELHA</h1>
-            <p class="fade-in lead fs-5 mb-5 text-light text-center">Insira sua matrícula abaixo para acessar:</p>
-
-            <div class="col-10 col-md-9 col-xl-5  form-floating text-center" id="telaLogin">     
-
-            <input class="form-control fade-in text-center p-3 my-3 mx-auto rounded-4 align-self-center" type="text" name="senha" id="isenha" placeholder=" ">
-            <label class="fs-5 fw-3" for="senha" id="matricula">Matrícula:</label>
-            <input class="input fade-in text-center p-3 my-3 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center" type="button" id="login" value="Entrar" onclick="entrar()">
+            <span class="mb-2 row" id="cabecalho">
+            </span>
+            <main class="fade-in row col-10 col-md-8 col-lg-6 col-xl-8 col-xxl-8 justify-content-center text-center">
+                <header class="display text-light">
+                    <h1 class="mb-3">Portal do Servidor</h1>
+                    <h1 class="mb-3">UESF TERRA VERMELHA</h1>
+                    <p class="lead fs-5 mb-5">Insira sua matrícula abaixo para acessar:</p>
+                </header>
+                    <div class="form-floating col-10 col-md-9 col-xl-5  justify-content-center" id="telaLogin">
+                        <input class="form-control text-center px-5 mx-auto rounded-4 align-self-center" type="text" name="senha" id="isenha" placeholder=" " required>
+                        <label class="form-label fs-6 fw-3 mt-0" for="senha" id="matricula" >Matrícula:</label>
+                        <input class="input p-3 my-3 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center" type="button" id="login" value="Entrar" onclick="entrar()">
+                    </div>
+            </main>
+        </div>
+        <footer>
+            <div class="fade-in oculto col-md-12 text-center">
+            <p class="lead fs-6">&copy; 2024 MMAlves. Todos os direitos resevados. v1.0</p>
             </div>
-          </main>
-        </div>
-      </div>
-      
-      <footer>
-        <div class="col-md-12 text-center">
-          <p class="lead fs-6">&copy; 2024 MMAlves. Todos os direitos resevados. v1.0</p>
-        </div>
-      </footer>
+        </footer>
     
-      <!--JS do Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-    
-    <script>
-    function handleIntersection(entries, observer) {
-        entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            // Aqui você pode adicionar mais ações conforme necessário
-        } else {
-            entry.target.classList.remove('visible');
+        <!--JS do Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+        <!-- JS do fade-in -->
+        <script>
+        function handleIntersection(entries, observer) {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Aqui você pode adicionar mais ações conforme necessário
+            } else {
+                entry.target.classList.remove('visible');
+            }
+            });
         }
+
+        // Criação do Intersection Observer
+        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+        // Observa todos os elementos com a classe "fade-in"
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
         });
-    }
+        </script>
+        <!-- JS da validação de matricula -->
+        <script>
+            const matriculasAcesso = [
+        10005747, 10006922, 9974601, 9983139, 58963, 10001337, 10006337, 10004139,
+        9076611, 9983724, 57681, 57916, 84760, 10003927, 10003024, 10007207, 9983180,
+        69167, 10005748, 806862, 10007701, 57215, 9982876, 10005244, 129917, 84689,
+        10003001, 10007528, 10001413, 121770, 10000855, 10007795, 9968342, 9083030,
+        10006058, 10006148, 51411, 10007191, 10006124, 10007781, 9982612, 58130,
+        9982795, 10000280, 10007863, 108952, 9946721, 10007700, 10005077, 9071970,
+        9962441, 59200, 10006094, 201901, 16268, 128260, 10005240, 84280
+            ];
+            let senha = document.querySelector('#isenha');
+            let acesso = document.querySelector('#login');
+            acesso.addEventListener("click", function(){
+                const valorSenha = parseInt(senha.value);
+                if(matriculasAcesso.includes(valorSenha)){
+                    localStorage.setItem('accessGranted', 'true');
+                    window.location.href = "home.html";
+                }else{
+                    alert('Digite sua matrícula corretamente para acessar o sistema. A mátricula inserida não pertence à esta unidade de saúde!');
+                }
+            });
+            senha.addEventListener("keydown", function(evento){
+                if(evento.key == 'Enter'){
+                const valorSenha = parseInt(senha.value);
+                if(matriculasAcesso.includes(valorSenha)){
+                    localStorage.setItem('accessGranted', 'true');
+                    window.location.href = "home.html";
+                }else{
+                    alert('Digite sua mátricula corretamente para acessar o sistema. A mátricula inserida não pertence à esta unidade de saúde!');
+                }
+                }
+            });
 
-    // Criação do Intersection Observer
-    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+        </script>
 
-    // Observa todos os elementos com a classe "fade-in"
-    document.querySelectorAll('.fade-in').forEach(element => {
-        observer.observe(element);
-    });
-    </script>
-    
-    <script>
-        const matriculasAcesso = [
-    10005747, 10006922, 9974601, 9983139, 58963, 10001337, 10006337, 10004139,
-    9076611, 9983724, 57681, 57916, 84760, 10003927, 10003024, 10007207, 9983180,
-    69167, 10005748, 806862, 10007701, 57215, 9982876, 10005244, 129917, 84689,
-    10003001, 10007528, 10001413, 121770, 10000855, 10007795, 9968342, 9083030,
-    10006058, 10006148, 51411, 10007191, 10006124, 10007781, 9982612, 58130,
-    9982795, 10000280, 10007863, 108952, 9946721, 10007700, 10005077, 9071970,
-    9962441, 59200, 10006094, 201901, 16268, 128260, 10005240, 84280
-        ];
-        let senha = document.querySelector('#isenha');
-        let acesso = document.querySelector('#login');
-        acesso.addEventListener("click", function(){
-            const valorSenha = parseInt(senha.value);
-            if(matriculasAcesso.includes(valorSenha)){
-                window.location.href = "home.html";
-            }else{
-                alert('Digite sua mátricula corretamente para acessar o sistema. A mátricula inserida não pertence à esta unidade de saúde!');
-            }
-        });
-        senha.addEventListener("keydown", function(evento){
-            if(evento.key == 'Enter'){
-            const valorSenha = parseInt(senha.value);
-            if(matriculasAcesso.includes(valorSenha)){
-                window.location.href = "home.html";
-            }else{
-                alert('Digite sua mátricula corretamente para acessar o sistema. A mátricula inserida não pertence à esta unidade de saúde!');
-            }
-            }
-        });
-
-    </script>
-
-</body>
+    </body>
 </html>

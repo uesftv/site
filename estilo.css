@@ -6,14 +6,10 @@
 
 
 body{
-    background-image: url('img/pontos.svg');
+    background-image: url('img/cpontos.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-#tela{
-    height: 100%;
 }
 
 #site{
@@ -33,8 +29,9 @@ body{
 #sair{
     background-color: #dfdfdf;
     text-decoration: none;
-    color: #075AA9;
-    border: 1px solid black;
+    color: #ce0101;
+    font-weight: bold;
+    border: 2px solid rgb(214, 0, 0);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.527);
 }
 

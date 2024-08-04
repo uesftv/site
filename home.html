@@ -1,77 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Inicial</title>
-  <!--CSS do Bootstrap-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <!--Nosso CSS-->
-  <link rel="stylesheet" href="estilo.css">
-  <link rel="shortcut icon" href="img/logo-favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <!--CSS do Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--Nosso CSS-->
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="img/logo-favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <div id="tela" class="container-fluid">
     <div class="row justify-content-center container-fluid" id="site">
-      <header class="mb-1 row justify-content-center" id="cabecalho">
-      </header>
-      <main class="row col-10 col-md-8 col-lg-6 col-xl-8 col-xxl-8 justify-content-center">
-          <h1 class="fade-in display mb-1 text-light text-center">Seja bem-vindo(a)!</h1>
-          <p class="fade-in lead fs-5 mb-1 text-light text-center col-12 col-xl-8 ">Esta é uma pagina desenvolvida pela Unidade de Saúde de Terra Vermelha, para modernizar, organizar e otimizar as solicitações dos seus servidores ao administrativo e coordenação local.</p>
-          <p class="fade-in lead fs-5 mb-5 text-light text-center">Selecione abaixo o serviço desejado:</p>
-          <div class="text-center row d-flex justify-content-around" id="botoes">             
-            <a class="fade-in text-center p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center" href="http://ponto.vilavelha.es.gov.br/ponto/" target="_blank" rel="noopener noreferrer">Acessar Ponto Eletrônico</a>
-
-            <a class="fade-in text-center p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center" href="https://forms.gle/zMwqGXTaYMZR8VJt5" target="_blank" rel="noopener noreferrer">Solicitar Férias</a>
-
-            <a class="fade-in text-center p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center" href="https://forms.gle/59wYGCo9FXVboMzi9" target="_blank" rel="noopener noreferrer">Registrar Ausência</a>
-
-            <!-- <a class="fade-in btn disabled text-center p-3 my-3 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center" href="https://forms.gle/URuZfRSJSrCJSBiNA" target="_blank" rel="noopener noreferrer">Solicitar Materiais</a> -->
-
-            <a class="fade-in text-center p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center" href="https://forms.gle/dDvsUYa6ZFCshu6w5" target="_blank" rel="noopener noreferrer">Registrar uma Ocorrência</a>
-
-            <a class="fade-in text-center p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center" href="https://correio.vilavelha.es.gov.br/" target="_blank" rel="noopener noreferrer">Acessar E-mail Institucional</a>
-
-            <a class="fade-in text-center p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center" href="https://www.vilavelha.es.gov.br/processos_servidor_submenu/" target="_blank" rel="noopener noreferrer">Portal do Servidor PMVV</a>
-
-            <a class="fade-in oculto text-center p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center" href="https://rh.vilavelha.es.gov.br/atendimentointerno/#!/login" target="_blank" rel="noopener noreferrer">Acessar Contracheque</a>
-
-            <a class="fade-in oculto text-center p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center" href="https://saude-pmvv.upcities.app/" target="_blank" rel="noopener noreferrer">Agendamento On-line<br>(Área do Servidor)</a>
-          </div>
-          <a id="sair" class="fade-in oculto text-center p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center" href="index.html" target="_self" rel="noopener noreferrer">Sair</a>
-          </div>  
-        <footer>
-            <div class="col-md-12 text-center">
-            <p class="lead fs-6">&copy; 2024 MMAlves. Todos os direitos resevados. v1.0</p>
-            </div>
-        </footer>
-      </main>
+        <span class="mb-2 row" id="cabecalho">
+        </span>
+        <main class="fade-in row col-10 col-md-8 col-lg-6 col-xl-8 col-xxl-8 justify-content-center text-center">
+            <header class="display text-light justify-content-center col-12 col-xl-8">
+                <h1 class="mb-1">Seja bem-vindo(a)!</h1>
+                <p class="lead fs-5 mb-1">Esta é uma pagina desenvolvida
+                pela Unidade de Saúde de Terra Vermelha, para modernizar, organizar e otimizar as solicitações dos
+                seus servidores ao administrativo e coordenação local.</p>
+                <p class="lead fs-5 mb-5">Selecione abaixo o serviço desejado:</p>
+            </header>
+            <div class="fade-in oculto text-center row d-flex justify-content-around" id="botoes">
+                <a class="fade-in oculto p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center"
+                href="http://ponto.vilavelha.es.gov.br/ponto/" target="_blank" rel="noopener noreferrer">Acessar
+                Ponto Eletrônico</a>
+                <a class="fade-in oculto p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center"
+                href="https://forms.gle/zMwqGXTaYMZR8VJt5" target="_blank" rel="noopener noreferrer">Solicitar
+                Férias</a>
+                <a class="fade-in oculto p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center"
+                href="https://forms.gle/59wYGCo9FXVboMzi9" target="_blank" rel="noopener noreferrer">Registrar
+                Ausências e Folgas</a>
+                <a class="fade-in oculto p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center"
+                href="https://forms.gle/dDvsUYa6ZFCshu6w5" target="_blank" rel="noopener noreferrer">Elogios, Reclamações, Ocorrências</a>
+                <a class="fade-in oculto p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center"
+                href="https://correio.vilavelha.es.gov.br/" target="_blank" rel="noopener noreferrer">Acessar
+                E-mail Institucional</a>
+                <a class="fade-in oculto p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center"
+                href="https://www.vilavelha.es.gov.br/processos_servidor_submenu/" target="_blank"
+                rel="noopener noreferrer">Portal do Servidor PMVV</a>
+                <a class="fade-in oculto p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center"
+                href="https://rh.vilavelha.es.gov.br/atendimentointerno/#!/login" target="_blank"
+                rel="noopener noreferrer">Acessar Contracheque</a>
+                <a class="fade-in oculto p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center"
+                href="https://saude-pmvv.upcities.app/" target="_blank" rel="noopener noreferrer">Agendamento
+                On-line<br>(Área do Servidor)</a>
+                <a id="sair"
+                class="fade-in oculto p-3 my-2 mx-auto rounded-4 col-10 col-md-9 col-xl-5 align-self-center"
+                href="index.html" target="_self" rel="noopener noreferrer" onclick="sair()">Sair</a>
+            </div> 
+        </main>
     </div>
-  </div>
+    <footer>
+        <div class="fade-in oculto col-md-12 text-center">
+        <p class="lead fs-6">&copy; 2024 MMAlves. Todos os direitos resevados. v1.0</p>
+        </div>
+    </footer>
 
-
-  <!--JS do Bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-  
-  <script>
-    function handleIntersection(entries, observer) {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          // Aqui você pode adicionar mais ações conforme necessário
-        } else {
-          entry.target.classList.remove('visible');
+    <!--JS do Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"crossorigin="anonymous"></script>
+    <!-- JS do fade-in -->
+    <script>
+        function handleIntersection(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Aqui você pode adicionar mais ações conforme necessário
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
         }
-      });
-    }
 
-    // Criação do Intersection Observer
-    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+        // Criação do Intersection Observer
+        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
 
-    // Observa todos os elementos com a classe "fade-in"
-    document.querySelectorAll('.fade-in').forEach(element => {
-      observer.observe(element);
-    });
-  </script>
+        // Observa todos os elementos com a classe "fade-in"
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+    <!-- JS Garantia de Acesso Restrito -->
+     <script>
+        const delay = 300000; //3 minutos
+        if(localStorage.getItem('accessGranted') !== 'true'){
+            window.location.href = 'index.html';
+        };
+        setTimeout(function(){
+            localStorage.setItem('accessGranted', 'false');
+            window.location.href = 'index.html';
+        }, delay);
+        let sair = document.querySelector('#sair');
+        sair.addEventListener("click", function(){
+            localStorage.setItem('accessGranted', 'false');
+        });
+     </script>
 </body>
+
 </html>

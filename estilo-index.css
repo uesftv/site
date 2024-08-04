@@ -6,14 +6,10 @@
 
 
 body{
-    background-image: url('img/pontos.svg');
+    background-image: url('img/cpontos.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-#tela{
-    height: 100%;
 }
 
 #site{
