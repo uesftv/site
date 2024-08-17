@@ -109,7 +109,7 @@ console.log(nomeUsuario)
 const nome = document.querySelector("#nome");
 nome.innerText = nomeUsuario;
 
-const index =  "index.html" /* "https://uesftv.github.io/site/" */
+const index =  "https://uesftv.github.io/site/"
 if(!matriculasAutorizadas.includes(valorUsuarioLogado)){
     window.location.href = index;
 };

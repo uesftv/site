@@ -31,7 +31,7 @@ let matricula = document.querySelector('#matricula');
 let botaoEntrar = document.querySelector('#botaoEntrar');
 let usuarioLogado = localStorage.getItem('accessGranted');
 const valorUsuarioLogado = parseInt(usuarioLogado);
-const home = "home.html"/* "https://uesftv.github.io/site/home" */;
+const home = "https://uesftv.github.io/site/home";
 
 if(matriculasAcesso.includes(valorUsuarioLogado)){
     window.location.href = home;
