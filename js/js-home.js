@@ -117,8 +117,9 @@ setTimeout(function(){
     localStorage.removeItem('accessGranted');
     window.location.href = index;
 }, delay);
+
 let sair = document.querySelector('#sair');
 sair.addEventListener("click", function(){
-    localStorage.removeItem('accessGranted');
     window.location.href = index;
+    localStorage.removeItem('accessGranted');
 });
