@@ -50,7 +50,7 @@ if(matriculasAcesso.includes(valorUsuarioLogado)){
         const valorSenha = parseInt(matricula.value);
         if(matriculasAcesso.includes(valorSenha)){
             localStorage.setItem('accessGranted', valorSenha);
-            window.location.href = "home.html";
+            window.location.href = home;
         }else{
             alert('Digite sua matrícula corretamente para acessar o sistema. A mátricula inserida não pertence à esta unidade de saúde!');
         }
