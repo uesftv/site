@@ -58,7 +58,7 @@ a:hover{
 
 footer{
   position: relative;
-  bottom: 0vh;
+  bottom: -1vh;
   width: 100vw;
   margin-top: 1rem;
 }
