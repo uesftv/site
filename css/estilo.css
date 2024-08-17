@@ -6,7 +6,7 @@
 
 
 body{
-    background-image: url('img/cpontos.png');
+    background-image: url('../img/cpontos.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,14 +20,29 @@ body{
 #cabecalho{
   height: 10rem;
   width: 100vw;
-  background-image: url('img/logo-pmvv.png');
+  background-image: url('../img/logo-pmvv.png');
   background-size: 300px 100px, cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
+#sair{
+    background-color: #dfdfdf;
+    text-decoration: none;
+    color: #ce0101;
+    font-weight: bold;
+    border: 2px solid rgb(214, 0, 0);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.527);
+}
 
-.input{
+#sair:hover{
+    background-color: #e90a0ad7;
+    box-shadow: 5px 5px 5px rgba(255, 253, 253, 0.164);
+    color: #FFFFFF;
+}
+
+
+a{
   background-color: #dfdfdf;
   text-decoration: none;
   color: #075AA9;
@@ -35,20 +50,15 @@ body{
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.527);
 }
 
-.input:hover{
+a:hover{
     background-color: #0aa2e9e5;
     box-shadow: 5px 5px 5px rgba(255, 253, 253, 0.164);
     color: #FFFFFF;
 }
 
-#matricula{
-    margin-top: 0.7rem;
-    margin-left: 0.5rem;
-}
-
 footer{
   position: relative;
-  top: 25vh;
+  bottom: -5vh;
   width: 100vw;
   margin-top: 1rem;
 }
