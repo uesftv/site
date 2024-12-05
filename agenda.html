@@ -19,9 +19,20 @@
         </span>
         <main class="row col-10 col-md-8 col-lg-6 col-xl-8 col-xxl-8 justify-content-center text-center">
             <header class="display text-light justify-content-center col-12 col-xl-8">
-                <h1 class="fade-in oculto mb-1">Olá <span id="nome"></span></h1>
+                <h2 class="fade-in oculto mb-1">Agenda do Auditório</h2>
                 <p class="fade-in lead fs-5 mb-1">Nesta página você vai encontrar vários arquivos úteis para o dia a dia da maioria dos profissionais.</p>
                 <p class="fade-in lead fs-5 mb-3">Selecione abaixo o arquivo desejado:</p>
+                <!-- Botão para abrir o pop-up -->
+                <button id="openPopupBtn">Abrir Explicações</button>
+
+                <!-- O Pop-up -->
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span id="closePopupBtn" class="close-btn">&times;</span>
+                        <h2>Explicações</h2>
+                        <p>Aqui estão as explicações detalhadas sobre o conteúdo que você deseja. Isso pode incluir texto, imagens ou links.</p>
+                    </div>
+                </div>
             </header>
             <div class="text-center row d-flex justify-content-around" id="botoes">
                 <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FSao_Paulo&showPrint=0&showTz=0&hl=pt_BR&showTitle=0&src=ODU1YmU4YjQ1NDA3ZjVlMzA3NDY1NTVlOGFkMmE3NDkzZTZiOTc1OTFhNmNlOWNkMTVjYTkzZWM3N2ViOGMwMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237986CB" style="border-width:0" width="700" height="600" frameborder="0" scrolling="no"></iframe>
@@ -41,6 +52,29 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
     <script src="js/js-home.js"></script>
+    <script>
+        // Obtém os elementos
+        const openPopupBtn = document.getElementById('openPopupBtn');
+        const closePopupBtn = document.getElementById('closePopupBtn');
+        const popup = document.getElementById('popup');
+
+        // Função para abrir o pop-up
+        openPopupBtn.addEventListener('click', () => {
+            popup.style.display = 'flex';
+        });
+
+        // Função para fechar o pop-up
+        closePopupBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        // Fecha o pop-up se clicar fora da área do conteúdo
+        window.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 
 </html>
