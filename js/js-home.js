@@ -93,8 +93,7 @@ const funcionariosPorMatricula = {
     "9982612": "Rosilene",
     "10005307": "Sandra",
     "9072420": "Sandra",
-    "621403": "Silvana",
-    "10008361": "Silvana"
+    "10008361": "Silvana",
     "10001257": "Silvia",
     "58130": "Simone",
     "9982795": "Sirlei",
