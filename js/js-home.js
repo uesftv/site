@@ -32,7 +32,7 @@ const matriculasAutorizadas = [
 const funcionariosPorMatricula = {
     "10008851":"Alessandra",
     "125792": "Adriana",
-    "10009704",:"Amanda",
+    "10009704":"Amanda",
     "10005747": "Amanda",
     "10006922": "Amanda",
     "13473": "Amauri",
