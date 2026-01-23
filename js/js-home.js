@@ -115,5 +115,5 @@ setTimeout(function(){
 const sair = document.querySelector('#sair');
 sair.addEventListener("click", () => {
     localStorage.removeItem('accessGranted');
-    window.location.replace(index);
+    window.location.href = index;
 });
