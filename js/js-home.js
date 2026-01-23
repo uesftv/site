@@ -112,8 +112,8 @@ setTimeout(function(){
     window.location.href = index;
 }, delay);
 
-let sair = document.querySelector('#sair');
-sair.addEventListener("click", function(){
-    window.location.href = index;
+const sair = document.querySelector('#sair');
+sair.addEventListener("click", () => {
     localStorage.removeItem('accessGranted');
+    window.location.replace('/index.html');
 });
